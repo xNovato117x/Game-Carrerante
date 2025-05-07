@@ -50,13 +50,13 @@ public class playerController : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (rigid.velocity.y > 0)
+        if (rigid.linearVelocity.y > 0)
         {
-            rigid.velocity += Vector3.up * Physics.gravity.y * (upwardMultiplier - 1) * Time.fixedDeltaTime;
+            rigid.linearVelocity += Vector3.up * Physics.gravity.y * (upwardMultiplier - 1) * Time.fixedDeltaTime;
         }
-        else if (rigid.velocity.y < 0)
+        else if (rigid.linearVelocity.y < 0)
         {
-            rigid.velocity += Vector3.up * Physics.gravity.y * (downwardMultiplier - 1) * Time.fixedDeltaTime;
+            rigid.linearVelocity += Vector3.up * Physics.gravity.y * (downwardMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
 
