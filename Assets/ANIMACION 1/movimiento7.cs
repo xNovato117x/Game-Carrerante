@@ -93,14 +93,14 @@ public class playerController : MonoBehaviour
 
 
         
-        if ((Input.GetButtonDown("Up")) && (inFloor))
-        {
+        if ((Input.GetButtonDown("Up")) && (inFloor)) {
            
             jumpForce = baseJumpForce * upwardMultiplier;
             rigid.AddForce(Vector3.up * jumpForce * jumpHeightMultiplier, ForceMode.Impulse);
             jumpForce = baseJumpForce;
-
+    
             animator.SetTrigger("Jump");
+     
         }
     }
 

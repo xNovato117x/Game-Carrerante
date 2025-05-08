@@ -499,6 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 691240497}
+  - component: {fileID: 691240498}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -522,6 +523,28 @@ Transform:
   - {fileID: 1644497034}
   m_Father: {fileID: 1065368058}
   m_LocalEulerAnglesHint: {x: 92.371, y: 0, z: 0}
+--- !u!95 &691240498
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691240495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed723f3e5f6b8384487e438615257dd1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &741872209
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,8 +994,8 @@ MonoBehaviour:
   jumpForce: 3
   horizontalDistance: 7
   jumpHeightMultiplier: 2
-  upwardMultiplier: 3
-  downwardMultiplier: 4
+  upwardMultiplier: 1.7
+  downwardMultiplier: 1.7
 --- !u!54 &1065368060
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1686,7 +1709,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1424522004980591615, guid: 4c41c76854b30f5489c28c469531516b, type: 3}
       propertyPath: m_Name
-      value: PISTA
+      value: suelo
       objectReference: {fileID: 0}
     - target: {fileID: 1424522004980591615, guid: 4c41c76854b30f5489c28c469531516b, type: 3}
       propertyPath: m_TagString
