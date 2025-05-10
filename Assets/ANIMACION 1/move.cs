@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-[DebuggerDisplay("{" + nameof(GetDebuggerDisplay) + "(),nq}")]
 public class move : MonoBehaviour{
 
     [SerializeField] float speed;
@@ -12,7 +10,7 @@ public class move : MonoBehaviour{
     // Use this for initialization
     void Start(){
 
-        Invoke("Destroy", health);
+        Invoke("Autodestruction", health);
     }
 
     // Update is called once per frame
@@ -24,10 +22,5 @@ public class move : MonoBehaviour{
     void Autodestruction()
     {
         Destroy(gameObject);
-    }
-
-    private string GetDebuggerDisplay()
-    {
-        return ToString();
     }
 }
