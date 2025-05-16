@@ -8,7 +8,7 @@ public class Trigger : MonoBehaviour
     {
         if (coll.CompareTag("Obstacle"))
         {
-            Debug.Log("Game Over");
+            levelManager.LM.GameOver();
         }
     }
 }
