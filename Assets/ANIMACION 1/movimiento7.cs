@@ -25,13 +25,17 @@ public class playerController : MonoBehaviour
     private bool isMoving = false; 
     private float movementTolerance = 0.05f;
 
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     [Header("Jump Control")]
     [SerializeField] float upwardMultiplier = 1.7f; 
-    [SerializeField] float downwardMultiplier = 1.7f; 
+    [SerializeField] float downwardMultiplier = 1.7f;
 
-    private float baseJumpForce; 
+    [Header("Player Audio")]
+    [SerializeField] private AudioClip[] audioClips;
+
+    private float baseJumpForce;
+    private AudioManager audioManager;
 
     void Awake()
     {
@@ -41,10 +45,11 @@ public class playerController : MonoBehaviour
     
     void Start()
     {
+        audioManager = AudioManager.Instance;
+
         destiny = transform.position;
         baseJumpForce = jumpForce;
-
-        animator = GetComponent<Animator>();
+        
     }
 
     void FixedUpdate()
@@ -129,7 +134,11 @@ public class playerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            inFloor = true;
+            if (!inFloor)
+            {
+                EnableHorseRun(true);
+                inFloor = true;
+            }
         }
     }
 
@@ -137,7 +146,30 @@ public class playerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            inFloor = false;
+            if (inFloor)
+            {
+                EnableHorseRun(false);
+                inFloor = false;
+            }
         }
+    }
+
+    private void EnableHorseRun(bool value)
+    {
+        if (value)
+        {
+            animator.SetBool("Run", true);
+            audioManager.PlaySFX(audioClips[0], true);
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+            audioManager.StopSFX(audioClips[0]);
+        }
+    }
+
+    public void HandleDeath()
+    {
+        EnableHorseRun(false);
     }
 }
