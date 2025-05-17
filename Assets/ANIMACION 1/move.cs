@@ -5,7 +5,7 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] int health = 5;
+    [SerializeField] int health = 7;
 
     void Start()
     {
