@@ -20,7 +20,7 @@ public class levelManager : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0; //esto hay que cambiarlo
+        Time.timeScale = 0; 
         mGameOver.SetActive(true);
     }
 
