@@ -23,6 +23,7 @@ public class playerController : MonoBehaviour
     private float movementTolerance = 0.05f;
 
     [SerializeField] private Animator animator;
+    [SerializeField] private Animator riderAnimator;
 
     [Header("Jump Control")]
     [SerializeField] float upwardMultiplier = 1.7f;
@@ -175,6 +176,7 @@ public class playerController : MonoBehaviour
     public void HandleDeath()
     {
         EnableHorseRun(false);
+        riderAnimator.enabled = true;
     }
 
     void UpdateScoreText()

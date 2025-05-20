@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
+    [SerializeField] private playerController playerController;
+
     void OnTriggerEnter(Collider coll)
     {
         if (coll.CompareTag("Obstacle"))
         {
-            levelManager.LM.GameOver();
+            playerController.HandleDeath();
+
+            GameOver();
+
+            //Invoke(nameof(GameOver), 2f);
+
         }
+    }
+
+    private void GameOver()
+    {
+        levelManager.LM.GameOver();
     }
 }
