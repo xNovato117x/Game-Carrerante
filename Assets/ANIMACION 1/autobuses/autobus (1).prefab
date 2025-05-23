@@ -181,8 +181,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6871932365084865674}
-  - component: {fileID: 6744116241524200036}
   - component: {fileID: 5485325601123334015}
+  - component: {fileID: 8098041027562127006}
   m_Layer: 0
   m_Name: autobus (1)
   m_TagString: Obstacle
@@ -210,20 +210,6 @@ Transform:
   - {fileID: 6477105927126325649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &6744116241524200036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3808787493926459164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3661e5a950609c24582c85efcc0dabf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 60
-  health: 7
 --- !u!65 &5485325601123334015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -245,6 +231,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.7351794, y: 7.57682, z: 14.397319}
   m_Center: {x: -1.1811013, y: 4.7127, z: -0.42838255}
+--- !u!114 &8098041027562127006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808787493926459164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3661e5a950609c24582c85efcc0dabf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 60
+  health: 7
 --- !u!1 &4536572927428754818
 GameObject:
   m_ObjectHideFlags: 0
