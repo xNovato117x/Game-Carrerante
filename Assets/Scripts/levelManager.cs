@@ -21,6 +21,8 @@ public class levelManager : MonoBehaviour
 
     public void GameOver()
     {
+        print("GameOver");
+
         isGameOver = true;
         mGameOver.SetActive(true);
         AudioManager.Instance.StopMusic();

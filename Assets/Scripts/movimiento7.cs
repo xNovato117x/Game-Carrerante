@@ -64,6 +64,9 @@ public class playerController : MonoBehaviour
 
         UpdateScoreText();
         UpdateCoinText();
+
+        EnableHorseRun(true);
+
     }
 
     void FixedUpdate()
@@ -209,6 +212,10 @@ public class playerController : MonoBehaviour
         {
             animator.SetBool("Run", true);
             audioManager.PlaySFX(audioClips[0], true);
+
+            riderAnimator.enabled = false;
+            riderAnimator.SetBool("Death", false);
+            animator.SetBool("Death", false);
         }
         else
         {
@@ -221,6 +228,8 @@ public class playerController : MonoBehaviour
     {
         EnableHorseRun(false);
         riderAnimator.enabled = true;
+        riderAnimator.SetBool("Death", true);
+        animator.SetBool("Death", true);
     }
 
     void UpdateScoreText()
