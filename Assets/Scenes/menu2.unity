@@ -1148,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 71c82874a39d3e44391b540f71952f50, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: cc79f1a2b5b883043a18b08fbfedd332, type: 2}
+      objectReference: {fileID: 2100000, guid: 78dca0ce6ab70b941bb92f430b538951, type: 2}
     - target: {fileID: 919132149155446097, guid: 71c82874a39d3e44391b540f71952f50, type: 3}
       propertyPath: m_Name
       value: menu 2
@@ -1248,7 +1248,7 @@ Transform:
   m_Children:
   - {fileID: 545903033}
   - {fileID: 1750267991}
-  m_Father: {fileID: 1781671744}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705698484 stripped
 GameObject:
@@ -2666,7 +2666,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &1781671742
+--- !u!1 &1802950882
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2674,29 +2674,60 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1781671744}
-  - component: {fileID: 1781671743}
+  - component: {fileID: 1802950883}
+  - component: {fileID: 1802950884}
+  - component: {fileID: 1802950885}
   m_Layer: 0
-  m_Name: Audio de WhatsApp 2025-05-16 a las 14.30.10_5893e763
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1781671743
+--- !u!4 &1802950883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802950882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 275.2765, y: 660, z: 699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1802950884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802950882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f80900d92bb5b143839cf78c19d16ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuMusic: {fileID: 8300000, guid: ec219663cac9152458c5b6c132c77aab, type: 3}
+  mapa1Music: {fileID: 8300000, guid: c633dcee0b06edc48a6a2e0d8225e553, type: 3}
+  mapasMusic: {fileID: 0}
+--- !u!82 &1802950885
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781671742}
+  m_GameObject: {fileID: 1802950882}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec219663cac9152458c5b6c132c77aab, type: 3}
-  m_Resource: {fileID: 8300000, guid: ec219663cac9152458c5b6c132c77aab, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.279
+  m_Volume: 0.608
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2780,22 +2811,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1781671744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781671742}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 674363698}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1806760142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3460,5 +3475,6 @@ SceneRoots:
   - {fileID: 352961695}
   - {fileID: 1265145677}
   - {fileID: 1335284571}
-  - {fileID: 1781671744}
   - {fileID: 1225704974}
+  - {fileID: 1802950883}
+  - {fileID: 674363698}

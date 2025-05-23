@@ -7,7 +7,6 @@ public class levelManager : MonoBehaviour
     public static levelManager LM;
     public static bool isGameOver = false;
 
-    // 🔧 AÑADIMOS ESTA LÍNEA:
     public static event Action OnRestart;
 
     [SerializeField] GameObject mGameOver;
@@ -21,11 +20,17 @@ public class levelManager : MonoBehaviour
 
     public void GameOver()
     {
-        print("GameOver");
+        Debug.Log("GameOver");
 
         isGameOver = true;
         mGameOver.SetActive(true);
-        AudioManager.Instance.StopMusic();
+
+        // Detener música actual del juego
+        var music = FindFirstObjectByType<MusicManager>();
+        if (music != null)
+        {
+            music.StopMusic();
+        }
 
         CancelInvoke();
     }
@@ -35,16 +40,16 @@ public class levelManager : MonoBehaviour
         isGameOver = false;
         mGameOver.SetActive(false);
 
-        // 🔧 INVOCA EL EVENTO PARA REACTIVAR LOS SPAWNERS
         OnRestart?.Invoke();
 
-        SceneManager.LoadScene(1);
+        // La música se reiniciará automáticamente al recargar la escena
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void BackToMenu()
     {
         isGameOver = false;
         mGameOver.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0); // Escena del menú
     }
 }

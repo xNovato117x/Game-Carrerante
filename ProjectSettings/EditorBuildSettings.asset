@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapas.unity
     guid: f88cb509bbb5ae246a563664fed50205
+  - enabled: 1
+    path: Assets/Scenes/Cuenta.unity
+    guid: a28dbfc403620ed43bd794971f81cdd6
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: e88f04c8b7f2e1741a422f0aa882f5cb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
