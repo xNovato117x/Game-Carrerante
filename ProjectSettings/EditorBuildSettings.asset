@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/opciones.unity
     guid: fe1679481d2458b4080ce79c8b0d52d3
+  - enabled: 1
+    path: Assets/Scenes/sonido.unity
+    guid: cb9c0b63d69cd90478a63f7e719a6540
+  - enabled: 1
+    path: Assets/Scenes/Mapas.unity
+    guid: f88cb509bbb5ae246a563664fed50205
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
