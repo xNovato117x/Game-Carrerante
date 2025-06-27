@@ -214,8 +214,6 @@ public class playerController : MonoBehaviour
             audioManager.PlaySFX(audioClips[0], true);
 
             riderAnimator.enabled = false;
-            riderAnimator.SetBool("Death", false);
-            animator.SetBool("Death", false);
         }
         else
         {
@@ -228,8 +226,8 @@ public class playerController : MonoBehaviour
     {
         EnableHorseRun(false);
         riderAnimator.enabled = true;
-        riderAnimator.SetBool("Death", true);
-        animator.SetBool("Death", true);
+        riderAnimator.SetTrigger("Death");
+        animator.SetTrigger("Death");
     }
 
     void UpdateScoreText()
